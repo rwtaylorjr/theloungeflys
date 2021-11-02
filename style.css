@@ -1,0 +1,294 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: #d7d7d7;
+    text-align: center;
+    font-size: 16px;
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+}
+
+#page-container {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+header img {
+    width: 100%;
+}
+
+header nav {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 1.5em;
+    transition: background 0.3;
+}
+
+header nav.sticky {
+    position: fixed;
+    top: 0;
+    max-width: 80%;
+    width: 100%;
+    background: rgba(0, 0, 0, 1.4);
+}
+
+header nav button#menu-toggle {
+    display: none; /* hide for desktop view */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    border: #d7d7d7 1px solid;
+    border-radius: 10px;
+    background: #000000;
+    color: #d7d7d7;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0, 0, 0, 0.6) 50%);
+    transition: background-position 0.2s;
+}
+
+header nav li:hover {
+    background-position: 0 100%;
+}
+
+header nav li a {
+    height: 100%;
+    padding: 10px 30px;
+    line-height: 2.1em;
+    color: #d7d7d7;
+}
+
+main section {
+    padding: 20px 0;
+    clear: both;
+}
+
+main section p {
+    font-size: 1.2em;
+    line-height: 2em;
+    text-align: left;
+}
+
+main section p:first-of-type::first-line {
+    font-weight: 600;
+}
+
+main img.banner {
+    width: 100%;
+    height: auto;
+}
+
+main section table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.3em;
+}
+
+main section table tr td {
+    padding: 20px;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+main section table a {
+    color: #d7d7d7;
+    text-decoration: underline;
+}
+
+main section table tr:hover {
+    background: #d7d7d7;
+    color: #000000;
+}
+
+main section table tr:hover a {
+    color: #000000;
+}
+
+main section table tr td:only-child {
+    text-align: center;
+}
+
+main section table tr td:first-child {
+    width: 25%;
+    border-left: 1px solid #d7d7d7;
+}
+
+main section table tr td:nth-child(2) {
+    width: 50%;
+}
+
+main section table tr td:last-child {
+    width: 25%;
+    border-right: 1px solid #d7d7d7;
+}
+
+.embed-container {
+    position: relative;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.embed-container video,
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img.section-img {
+    max-width: 300px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+img.section-img.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+img.section-img.float-right {
+    float: right;
+    margin-left: 20px;
+}
+
+div.social-media-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: width height;
+}
+
+.social-media-btn a img {
+    width: 100%;
+    height: auto;
+}
+
+div.facebook {
+    background: #3E5C9A;
+}
+
+div.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+/* Resets */
+button, button:focus {
+    background: unset;
+    border: unset;
+    outline: unset;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+video,
+video:focus {
+    outline: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Tablet and smaller device handling */
+@media (max-width: 834px) {
+
+    #page-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    header nav button#menu-toggle {
+        display: block;
+    }
+
+    header nav.sticky {
+        max-width: 100%;
+    }
+
+    header nav ul {
+        display: none;
+        margin-top: 50px;
+    }
+
+    header nav ul.is-active {
+        display: block;
+    }
+
+    header nav ul li {
+        display: block;
+        background: #222;
+    }
+
+    header nav ul li:hover,
+    header nav ul li:active,
+    header nav ul li:focus {
+        background: #000000;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    main section p {
+        font-size: 1.2em;
+        line-height: 2em;
+        text-align: center;
+    }
+
+    img.section-img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    img.section-img.float-left {
+        float: none;
+        margin-right: 0;
+    }
+
+    img.section-img.float-right {
+        float: none;
+        margin-left: 0;
+    }
+
+}
